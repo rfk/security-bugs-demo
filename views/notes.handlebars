@@ -1,0 +1,19 @@
+Here are your notes.
+<ul>
+{{#each notes}}
+  <li>{{this.body}}<form action="remove_note" method="POST"><input type="hidden" name="id" value="{{this.id}}" /><input type="submit" value="delete"/></form></li>
+{{else}}
+  <li>No notes yet</li>
+{{/each}}
+</ul>
+<form action="append_note" method="POST">
+<input type="text" name="note" /><br/>
+<input type="submit" value="add note" />
+</form>
+<br/>
+<form action="logout" method="POST">
+<input type="submit" value="logout" />
+</form>
+<form action="delete_account" method="POST">
+<input type="submit" value="delete account" />
+</form>

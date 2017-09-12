@@ -1,0 +1,6 @@
+Hi {{ name }}, please confirm your account:
+<form action="confirm_account" method="POST">
+Confirmation Code: <input type="text" name="code" value="{{code}}" /><br/>
+<input type="hidden" name="email" value="{{email}}" /><br/>
+<input type="submit" value="Confirm Account" />
+</form>
