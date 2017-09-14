@@ -1,9 +1,8 @@
 
-const app = require('./lib/app')
+// Run the server locally on port 8083.
+// We expect it to be fronted by e.g. an nginx reverse proxy.
 
-app.get('/', function(req, res) {
-  res.send(200, 'hi there!')
-})
+const app = require('./lib/app')
 
 app.listen(8083, function() {
   console.log("Running!")

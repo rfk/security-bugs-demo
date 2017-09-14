@@ -1,19 +1,35 @@
-Here are your notes.
+<h1>Your Notes</h1>
+<br />
 <ul>
 {{#each notes}}
-  <li>{{this.body}}<form action="remove_note" method="POST"><input type="hidden" name="id" value="{{this.id}}" /><input type="submit" value="delete"/></form></li>
+  <li><form action="remove_note" method="POST"><p>
+        {{this.body}}
+        <span style="float: right"><input type="hidden" name="note_id" value="{{this.id}}" /><input type="submit" value="delete"/></span>
+      </p></form>
+   </li>
 {{else}}
   <li>No notes yet</li>
 {{/each}}
 </ul>
+<hr />
+<div class="centering">
 <form action="append_note" method="POST">
-<input type="text" name="note" /><br/>
-<input type="submit" value="add note" />
+<p>
+  <input type="text" name="note_body" />
+  <input type="submit" value="add note" />
+</p>
 </form>
-<br/>
-<form action="logout" method="POST">
-<input type="submit" value="logout" />
-</form>
-<form action="delete_account" method="POST">
-<input type="submit" value="delete account" />
-</form>
+</div>
+<hr />
+<div class="container"><div class="row">
+<div class="col" style="text-align: left">
+  <form action="logout" method="POST">
+  <input type="submit" value="logout" />
+  </form>
+</div>
+<div class="col" style="text-align: right">
+  <form action="delete_account" method="POST">
+  <input type="submit" value="delete account" />
+  </form>
+</div>
+</div></div>

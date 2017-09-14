@@ -1,8 +1,15 @@
-Hi There!
+<h1>Create an Account</h1>
+<h4>to access the demo notes app</h4>
 <form action="create_account" method="POST">
-Name: <input type="text" name="name" value="{{name}}" /><br/>
-Email: <input type="text" name="email" value="{{email}}" /><br/>
-Password: <input type="password" name="password" /><br/>
-<input type="submit" value="Create Account" />
-</form><br/>
-<a href="login">Have an account? Log in.</a>
+<div class="form-group">
+  <label for="inputEmail">Email:</label>
+  <input id="inputEmail" class="form-control" type="text" name="email" value="{{email}}" />
+  <label for="inputPassword">Password:</label>
+  <input type="password" id="inputPassword" class="form-control" name="password" />
+  <label for="inputName">Name (optional):</label>
+  <input type="text" class="form-control" name="name" id="inputName" value="{{name}}" />
+  <br />
+  <div class="centering"><button type="submit" class="btn btn-primary">Create Account</button></div>
+</div>
+</form>
+<div class="centering"><a href="login">Have an account? Log in.</a></div>

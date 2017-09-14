@@ -1,6 +1,12 @@
-Hi {{ name }}, please confirm your account:
+<h1>Confirm your account</h1>
+<h4>Using the code from your email</h4>
+<br />
 <form action="confirm_account" method="POST">
-Confirmation Code: <input type="text" name="code" value="{{code}}" /><br/>
-<input type="hidden" name="email" value="{{email}}" /><br/>
-<input type="submit" value="Confirm Account" />
+<div class="form-group">
+  <label for="inputCode">Confirmation Code:</label>
+  <input id="inputCode" class="form-control" type="text" name="code" value="{{code}}" /><br/>
+  <input type="hidden" name="email" value="{{email}}" /><br/>
+  <div class="centering"><button type="submit" class="btn btn-primary">Confirm Account</button></div>
+</div>
 </form>
+<div class="centering"><a href="create_account">Go back</a></div>
